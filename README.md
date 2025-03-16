@@ -99,7 +99,7 @@ El crecimiento de la planta está basado en el cálculo de la derivada del tama�
 **Fórmula de la Derivada del Tamaño:**
 
 $$
-\frac{d(\text{tamaño})}{dt}= \bigl(\text{tamaño\_actual} + \text{tasa\_crecimiento}\bigr)  \times \frac{\text{salud}}{100}
+\frac{d(\text{tamaño})}{dt}= \bigl(\text{tamaño actual} + \text{tasa de crecimiento}\bigr)  \times \frac{\text{salud}}{100}
 $$
 
 **Explicación:**
@@ -138,22 +138,19 @@ El daño acumulado a la salud de la planta depende de factores ambientales, como
 **Fórmula del Daño Acumulado a la Salud:**
 
 $$
-\text{daño\_acumulado}= \bigl(\text{Temperatura} + \text{Contaminación}\bigr)  \times \text{Días}
+\text{daño acumulado} = \bigl(\text{Temperatura} + \text{Contaminación}\bigr)  \times \text{Días}
 $$
 
 La nueva salud de la planta es el valor de la salud inicial menos el daño acumulado:
 
 $$
-\text{salud\_nueva}
-= \text{salud\_actual}
-  - \text{daño\_acumulado}
+\text{salud nueva} = \text{salud actual} - \text{daño acumulado}
 $$
 
 Finalmente, la salud se ajusta para no exceder los valores entre 0 y 100%:
 
 $$
-\text{salud\_final}
-= \max\bigl(0,\,\min(\text{salud\_nueva},\,100)\bigr)
+\text{salud final} = \max\bigl(0, \min(\text{salud nueva}, 100)\bigr)
 $$
 
 ![Gráfica del Daño Acumulado Plant Growth Simulation.png](images/Grfica_del_Dao_Acumulado_Plant_Growth_Simulation.png)
@@ -184,7 +181,7 @@ $$
 - La función asegura que la salud no caiga por debajo de 0% ni suba por encima del 100%.
 
 $$
- \max\bigl(0,\,\min(\text{salud\_nueva},\,100)\bigr)
+\max\bigl(0, \min(\text{salud nueva}, 100)\bigr)
 $$
 
 Este modelo refleja cómo los factores ambientales afectan la salud de la planta a lo largo del tiempo.
@@ -196,7 +193,7 @@ La contaminación se modela como una función lineal en el tiempo, incrementánd
 **Fórmula de Crecimiento de la Contaminación:**
 
 $$
-\text{contaminación\_futura}= \text{contaminación\_actual}  + 0.1 \times \text{días}
+\text{contaminación futura} = \text{contaminación actual} + 0.1 \times \text{días}
 $$
 
 **Explicación:**
