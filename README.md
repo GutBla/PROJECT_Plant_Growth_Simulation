@@ -57,6 +57,7 @@ cd PROJECT_Plant_Growth_Simulation
     ```bash
     pip install colorama
     pip install clear_screen
+    ...
     ```
     
 
